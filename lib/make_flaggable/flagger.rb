@@ -31,7 +31,7 @@ module MakeFlaggable
         raise MakeFlaggable::Exceptions::AlreadyFlaggedError.new
       end
 
-      Flagging.create(:flaggable => flaggable, :flagger => self, :reason => reason)
+      Flagging.create(:flaggable => flaggable, :flagger => self, :flag => reason)
     end
 
     # Flag the +flaggable+, but don't raise an error if the flaggable was already flagged and +:flag_once+ was set.
